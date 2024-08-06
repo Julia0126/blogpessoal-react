@@ -1,17 +1,27 @@
-// Elemento JSX/TSX => Função que retorna HTML
+import React from 'react';
+import './App.css';
+import Home from './pages/Home/Home';
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer';
 
-import Home from "./pages/Home/Home"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './pages/Home/Home';
 
 function App() {
-
-
   return (
     <>
-      <Home />
-      <h1>Cmponente react</h1>
-      </>
-    
-  )
+    <BrowserRouter>
+        <Navbar />
+          <div className='min-h-[80vh]'>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/home" element={<Home />} />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+    </>
+);
 }
-
-export default App
+export default App;
