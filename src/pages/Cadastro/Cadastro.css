@@ -1,0 +1,8 @@
+.fundoCadastro {
+  background-image: url(https://raw.githubusercontent.com/Julia0126/fundamentos-web/main/assets/cadastro.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}

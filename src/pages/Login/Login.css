@@ -1,0 +1,9 @@
+.fundoLogin {
+    background-image: url(https://raw.githubusercontent.com/Julia0126/fundamentos-web/main/assets/login.png);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    
+  }
