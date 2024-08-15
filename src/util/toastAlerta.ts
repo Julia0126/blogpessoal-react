@@ -19,7 +19,7 @@ export function toastAlerta(mensagem: string, tipo: string) {
     case 'info':
       toast.info(mensagem, {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 4000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
