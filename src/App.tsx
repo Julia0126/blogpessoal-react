@@ -1,28 +1,34 @@
 import React from 'react';
 import './App.css';
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
+import { ToastContainer } from 'react-toastify';
+
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import Home from './pages/Home/Home';
-import Cadastro from './pages/Cadastro/Cadastro';
 import Login from './pages/Login/Login';
-import { AuthProvider } from './contexts/AuthContext';
+import Perfil from './pages/Perfil/Perfil';
+import Cadastro from './pages/Cadastro/Cadastro';
 import ListaTemas from './components/Temas/ListaTemas/ListaTemas';
-import FormularioTema from './components/Temas/FormularioTema/FormularioTema';
 import DeletarTema from './components/Temas/DeletarTema/DeletarTema';
+import FormularioTema from './components/Temas/FormularioTema/FormularioTema';
 import ListaPostagens from './components/Postagens/ListaPostagens/ListaPostagens';
-import FormularioPostagem from './components/Postagens/FormularioPostagem/FormularioPostagem';
 import DeletarPostagem from './components/Postagens/DeletarPostagem/DeletarPostagem';
+import FormularioPostagem from './components/Postagens/FormularioPostagem/FormularioPostagem';
 
-
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
+  
   return (
     <>
-    <AuthProvider>
+      <AuthProvider>
+      <ToastContainer />
         <BrowserRouter>
-          <Navbar />
+        <Navbar />
           <div className='min-h-[80vh]'>
             <Routes>
               <Route path="/" element={<Login />} />
@@ -37,12 +43,14 @@ function App() {
               <Route path="/cadastroPostagem" element={<FormularioPostagem />} />
               <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
               <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+              <Route path="/perfil" element={<Perfil />} />
             </Routes>
           </div>
           <Footer />
         </BrowserRouter>
-        </AuthProvider>
+      </AuthProvider>
     </>
   );
 }
+
 export default App;
