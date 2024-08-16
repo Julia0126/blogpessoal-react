@@ -40,7 +40,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
         } catch (error) {
             console.log(error)
-            toastAlerta('Usuário ou senha incorretos', 'info');
+            toastAlerta('Usuário ou senha incorretos', 'erro');
             setIsLoading(false)
         }
     }
