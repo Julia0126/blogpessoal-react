@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { atualizar, buscar, cadastrar } from '../../../services/Service';
 import Postagem from '../../../models/Postagem';
 import Tema from '../../../models/Tema';
